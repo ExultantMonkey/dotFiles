@@ -1,0 +1,24 @@
+#! /bin/sh
+
+echo -e "${YELLOW}Downloading checksum...${NC}"
+EXPECTED_CHECKSUM="$(curl -s https://composer.github.io/installer.sha384sum)"
+
+echo -e "${YELLOW}Downloading installer...${NC}"
+curl -s https://getcomposer.org/installer -o composer-setup.php
+
+echo -e "${YELLOW}Comparing checksums...${NC}"
+ACTUAL_CHECKSUM="$(sha384sum -b composer-setup.php)"
+
+if [ "$EXPECTED_CHECKSUM" != "$ACTUAL_CHECKSUM" ]
+then
+    echo -e "${RED}ERROR: Invalid installer checksum${NC}"
+    rm composer-setup.php
+    exit 1
+fi
+
+echo -e "${GREEN}Checksum validated!${NC}"
+
+php composer-setup.php --install-dir="$HOME/bin" --filename="composer"
+RESULT=$?
+rm composer-setup.php
+exit $RESULT

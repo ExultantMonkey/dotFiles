@@ -1,0 +1,3 @@
+# Adds executables managed by yarn to the path
+
+export PATH="$(yarn global bin):$PATH"

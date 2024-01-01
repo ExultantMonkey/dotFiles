@@ -1,0 +1,22 @@
+#! /bin/bash
+
+# A very basic script to test that terminal colours work
+
+echo -e "${WHITE}${BG_BLACK}White on Black${NC}"
+echo -e "${BLACK}${BG_WHITE}Black on White${NC}"
+
+echo -e "${RED}Red${NC}"
+echo -e "${WHITE}${BG_RED}White on Red${NC}"
+
+echo -e "${GREEN}Green${NC}"
+echo -e "${WHITE}${BG_GREEN}White on Green${NC}"
+
+echo -e "${YELLOW}Yellow${NC}"
+
+echo -e "${BLUE}Blue${NC}"
+
+echo -e "${MAGENTA}Magenta${NC}"
+
+echo -e "${CYAN}Cyan${NC}"
+
+echo "Should be back to normal"

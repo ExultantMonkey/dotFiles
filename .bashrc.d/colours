@@ -1,0 +1,27 @@
+# Sets up the colour codes that I use in any scripts
+#
+# REMEMBER - echo need -e argument (eg echo -e "${RED}ERROR${NC}")
+# and that foreground comes before background
+#
+# Yes, I'm probably making huge mistakes here, but it works
+
+export BLACK='\033[0;30m'
+export RED='\033[0;31m'
+export GREEN='\033[0;32m'
+export YELLOW='\033[0;33m'
+export BLUE='\033[0;34m'
+export MAGENTA='\033[0;35m'
+export CYAN='\033[0;36m'
+export WHITE='\033[0;37m'
+
+
+export BG_BLACK='\033[40m'
+export BG_RED='\033[41m'
+export BG_GREEN='\033[42m'
+export BG_YELLOW='\033[43m'
+export BG_BLUE='\033[44m'
+export BG_MAGENTA='\033[45m'
+export BG_CYAN='\033[46m'
+export BG_WHITE='\033[47m'
+
+export NC='\033[0m' # No Color

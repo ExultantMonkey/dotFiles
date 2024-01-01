@@ -1,0 +1,11 @@
+[user]
+email = david@exultantmonkey.co.uk
+name = David William Richmond Davies-Jones
+signingkey = 1ABACEA4803E545B09955F342232863393208E9F
+
+[core]
+editor = nano
+autocrlf = true
+
+[init]
+defaultBranch = main
