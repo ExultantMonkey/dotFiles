@@ -1,0 +1,4 @@
+# This ensures that $HOME/bin is available on $PATH
+# This is rather simple, so it *might* break at some point
+
+echo $PATH | grep "$HOME/bin" > /dev/null || export PATH="$HOME/bin:$PATH"
