@@ -1,7 +1,7 @@
 [user]
 email = david@exultantmonkey.co.uk
 name = David William Richmond Davies-Jones
-signingkey = 1ABACEA4803E545B09955F342232863393208E9F
+signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIERUXjz3kx8oYCGA8ue7vNui0WTj64wOHLCITuiwlNom
 
 [core]
 editor = nano
@@ -12,3 +12,10 @@ defaultBranch = main
 
 [fetch]
 prune = true
+
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /opt/1Password/op-ssh-sign
+[commit]
+	gpgsign = true
